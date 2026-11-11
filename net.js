@@ -3,7 +3,7 @@
 // The host runs the whole game and streams the canvas (video + sound) to friends over WebRTC.
 // Friends only send their button presses back. PeerJS's free public broker is used just to introduce the browsers to each other.
 const NET = { peer: null, mode: '', code: '', status: '', conns: {}, inp: {}, stream: null, conn: null, vid: null, you: -1 };
-const ROOM = 'chaos-carnival-';
+const ROOM = 'rumble-royale-';
 function loadPeer(cb) {
   if (window.Peer) return cb();
   const s = document.createElement('script'); s.src = 'https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js'; s.onload = cb;

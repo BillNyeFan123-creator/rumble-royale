@@ -43,7 +43,7 @@ const Lobby = {
   draw() {
     rect(0, 0, W, H, '#141824');
     for (let i = 0; i < 4; i++) circ(W / 2 + (i - 1.5) * 90, 50 + Math.sin(this.t * 3 + i) * 6, 20, COLS[i]);
-    txt('CHAOS CARNIVAL', W / 2, 128, 80); txt(GAMES.length + ' games  ×  ' + MUTS.length + ' mutators  =  ' + VARIANTS() + ' ways to play', W / 2, 188, 22, '#ffd43b');
+    txt('RUMBLE ROYALE', W / 2, 128, 80); txt(GAMES.length + ' games  ×  ' + MUTS.length + ' mutators  =  ' + VARIANTS() + ' ways to play', W / 2, 188, 22, '#ffd43b');
     for (let i = 0; i < 4; i++) {
       const x = 170 + i * 313, p = roster[i]; rect(x - 140, 226, 280, 110, p ? p.col : '#1f2740');
       txt(p ? p.name : 'open slot', x, 262, p ? 30 : 22, p ? '#111' : '#6b7591'); if (p) txt(devName(p.dev), x, 304, 18, '#111');
